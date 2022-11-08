@@ -1,47 +1,32 @@
-// const Friends = require('./friends');
-// const Games = require('./games');
-// // const Profile = require('./profile');
-// const User = require('./user');
-// const Collection = require ('');
-// const Comments = re
+const Friends = require('./friends');
+const Games = require('./games');
+const User = require('./user');
+const Collection = require ('./collection');
+const Comments = require('./comments'); 
 
-// Friends.belongsToMany(, {
-//   //table needed to store the foreign keys?
-//   through: {
-//     model: ,
-//     unique: false
-//   },
-//   // alias for when data is retrieved?
-//   as: ''
-// });
+User.hasOne(Collection, {
+});
+Collection.belongsTo(User, {
+});
 
-// Games.belongsToMany(, {
-//   //table needed to store the foreign keys?
-//   through: {
-//     model: ,
-//     unique: false
-//   },
-//   // alias for when data is retrieved?
-//   as: ''
-// });
+Collection.hasMany(Games, {
+});
+Games.belongTo(Collection, {
+});
 
-// Profile.belongsToMany(, {
-//     //table needed to store the foreign keys?
-//     through: {
-//       model: ,
-//       unique: false
-//     },
-//     // alias for when data is retrieved?
-//     as: ''
-//   });
+User.hasMany(Comments,{
+});
 
-//   User.belongsToMany(, {
-//     //table needed to store the foreign keys?
-//     through: {
-//       model: ,
-//       unique: false
-//     },
-//     // alias for when data is retrieved?
-//     as: ''
-//   });
-// module.exports = { Friends, Games, Profile, User };
+Comments.belongsTo(User,{
+
+});
+
+module.exports = {
+    User,
+    Games,
+    Collection,
+    Comments,
+    
+}
+
+
