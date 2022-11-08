@@ -11,7 +11,7 @@ router.get(`/`, async (req, res) => {
     }
 });
 
-router.get(`/genre`, async (req, res) => {
+router.get(`/genre/:id`, async (req, res) => {
     try {
         res.json(`working!`)
     } catch (err) {
@@ -20,7 +20,7 @@ router.get(`/genre`, async (req, res) => {
     }
 });
 
-router.get(`/numPlayer`, async (req, res) => {
+router.get(`/numPlayer/:id`, async (req, res) => {
     try {
         res.json(`working!`)
     } catch (err) {
@@ -29,7 +29,7 @@ router.get(`/numPlayer`, async (req, res) => {
     }
 });
 
-router.push(`/`, async (req, res) => {
+router.post(`/`, async (req, res) => {
     try {
         res.json(`working!`)
     } catch (err) {
