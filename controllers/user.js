@@ -1,7 +1,8 @@
 // const { Module } = require('module');
 
 const router = require('express').Router();
-// do: import User model from models directory
+const {User,Games} = require('../model')
+
 router.get(`/`, async (req, res) => {
     try{
         // do: need to assign a variable that finds all Users - Users.findAll(...) - Willnote: need to .map() through each User here and set to plain: true
