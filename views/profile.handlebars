@@ -1,4 +1,10 @@
 <h1>Welcome back, {{name}}</h1>
+<button id="addPic">Add Profile Picture</button>
+<button id="editPic" class="hidden">Edit Profile Picture</button>
+<form class="hidden" id="picForm">
+    <input type="file" name="profilePic" id="profilePic">
+    <button id="submitPic">Submit</button>
+</form>
 <h2>Games I Own</h2>
 {{!-- {{#each}}
 
@@ -11,3 +17,5 @@
     <input type="number" name="gameNumPlayers" id="gameNumPlayers" placeholder="Number of players">
     <button>Add Game!</button>
 </form>
+
+<script src="/js/profile.js"></script>

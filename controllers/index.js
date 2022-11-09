@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const userRoutes = require('./user');
+const profileRoutes = require('./profile');
 const loginRoutes = require(`./login`)
 
 // require models const { list models } = require(`../models`)
@@ -16,14 +16,11 @@ router.get(`/`, async (req,res)=> {
     //     ],
     // });
 
-    // const body = await dbUserData.map((user) => 
+    // const user = await dbUserData.map((user) => 
     //     user.get({ plain: true })
     // );
-
-    const user = [`Hello`, `World!`]
     
     res.render('homepage', {user});
-    // res.json(`Working!`)
 
     } catch (err) {
         console.log(err);
@@ -31,7 +28,7 @@ router.get(`/`, async (req,res)=> {
     }
 });
 
-router.use('/user', userRoutes);
+router.use('/profile', profileRoutes);
 router.use(`/login`, loginRoutes);
 
 module.exports = router;

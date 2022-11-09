@@ -1,6 +1,11 @@
 body {
     background-color: salmon;
 }
+
 header {
     background-color: aqua;
+}
+
+.hidden {
+    display: none;
 }
