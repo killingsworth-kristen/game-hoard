@@ -11,7 +11,7 @@ Collection.belongsTo(User, {
 
 Collection.hasMany(Games, {
 });
-Games.belongTo(Collection, {
+Games.belongsTo(Collection, {
 });
 
 User.hasMany(Comments,{
@@ -26,7 +26,7 @@ module.exports = {
     Games,
     Collection,
     Comments,
-    
+    Friends
 }
 
 
