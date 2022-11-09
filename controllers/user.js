@@ -1,6 +1,7 @@
 // const { Module } = require('module');
 
 const router = require('express').Router();
+const {User,Games} = require('../model')
 
 router.get(`/`, async (req, res) => {
     try{
