@@ -4,14 +4,14 @@ const router = require('express').Router();
 
 router.get(`/`, async (req, res) => {
     try{
-        res.json(`working!`)
+        res.render(`profile`)
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
     }
 });
 
-router.get(`/genre/:id`, async (req, res) => {
+router.get(`/:id/genre/`, async (req, res) => {
     try {
         res.json(`working!`)
     } catch (err) {

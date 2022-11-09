@@ -23,7 +23,6 @@ router.get(`/`, async (req,res)=> {
     const user = [`Hello`, `World!`]
     
     res.render('homepage', {user});
-    // res.json(`Working!`)
 
     } catch (err) {
         console.log(err);
