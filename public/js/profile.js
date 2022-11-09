@@ -18,8 +18,25 @@ addPicBtn.addEventListener(`click`, function(event) {
 submitPicBtn.addEventListener(`click`, function(event) {
     event.preventDefault();
     console.log(profilePicFile.value)
+    // sends picture info to backend
+    fetch("/user",{
+        method:"PUT",
+        body:JSON.stringify({profile_pic: profilePicFile.value}),
+        headers:{
+            "Content-Type":"application/json"
+        }
+    }).then(res=>{
+        if(res.ok){
+           location.reload()
+        } else {
+            alert("trumpet sound")
+        }
+    })
     editPicBtn.className = `shown`
 });
+
+
+
 
 
 

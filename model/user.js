@@ -25,6 +25,10 @@ User.init(
         length: [8],
         },
       },
+      profile_pic: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      }
    
   },
 {
