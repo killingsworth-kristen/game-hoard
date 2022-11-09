@@ -16,7 +16,7 @@ router.get(`/`, async (req,res)=> {
     //     ],
     // });
 
-    // const body = await dbUserData.map((user) => 
+    // const user = await dbUserData.map((user) => 
     //     user.get({ plain: true })
     // );
 
