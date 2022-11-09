@@ -1,10 +1,8 @@
 // const { Module } = require('module');
 
 const router = require('express').Router();
-const {User} = require('../model');
+const {User,Games} = require('../model')
 
-
-// tjm do: import User model from models directory
 router.get(`/`, async (req, res) => {
    
     // // console.log(userData) 
