@@ -1,18 +1,29 @@
 body {
-    background-color: salmon;
+    background-color: rgb(125, 244, 228);
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: auto;
 }
 
 header {
-    background-color: aqua;
+    background-color: rgb(99, 106, 106);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 35px
 }
+
+/* /* .particles {
+    margin: 8px;
+    padding: 8px; */
+
+/* } */ */
 
 .hidden {
     display: none;
 }
 
 body, html {
-    margin: 0px; 
-    padding: 0px; 
+    margin: 1px; 
+    padding: 1px; 
+    font-size: 18px;
   }
   
   #DRAGON {
