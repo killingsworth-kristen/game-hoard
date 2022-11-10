@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const profileRoutes = require('./profile');
-const loginRoutes = require(`./login`)
+const frontEndRoutes = require('./frontEndRoutes');
+const apiRoutes = require('./api');
 
 // require models const { list models } = require(`../models`)
 
@@ -20,7 +20,7 @@ router.get(`/`, async (req,res)=> {
     //     user.get({ plain: true })
     // );
     
-    res.render('homepage', {});
+    res.render('homepage');
 
     } catch (err) {
         console.log(err);
@@ -28,7 +28,7 @@ router.get(`/`, async (req,res)=> {
     }
 });
 
-router.use('/profile', profileRoutes);
-router.use(`/login`, loginRoutes);
+router.use( frontEndRoutes);
+router.use('/api', apiRoutes);
 
 module.exports = router;
