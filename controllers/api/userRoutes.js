@@ -53,4 +53,23 @@ router.post(`/logout`, (req,res)=> {
     }
 });
 
+router.put("/profile",(req,res)=>{
+    if(!req.session.logged_in){
+        return res.redirect("/login")
+    }
+    console.log(req.body)
+    User.update({
+        profile_pic: req.body.profile_pic},{
+        where: {
+            id: req.session.user_id
+        },
+    }).then(data=>{
+        if(!data) {
+            res.status(404).json({msg: `This user does not exist!`})
+          }
+        console.log(data)
+        res.render("profile", data);
+    })
+})
+
 module.exports=router;

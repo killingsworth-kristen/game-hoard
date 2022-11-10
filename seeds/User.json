@@ -2,17 +2,20 @@
     {
       "name": "Kristen",
       "user_name": "kristen345",
-      "password": "password"
+      "password": "password",
+      "profile_pic": null
     },
     {
       "name": "Tiffany",
       "user_name": "Tiffany343",
-      "password": "password"
+      "password": "password",
+      "profile_pic": null
     },
     {
       "name": "Andrew",
       "user_name": "Andrew42",
-      "password": "password"
+      "password": "password",
+      "profile_pic": null
     }
   ]
   
