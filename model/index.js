@@ -1,32 +1,48 @@
-const Friends = require('./friends');
+// const Friends = require('./friends');
 const Games = require('./games');
 const User = require('./user');
-const Collection = require ('./collection');
-const Comments = require('./comments'); 
+// const Collection = require ('./collection');
+// const Comments = require('./comments'); 
 
-User.hasOne(Collection, {
-});
-Collection.belongsTo(User, {
-});
+// User.hasOne(Collection, {
+//     foreignKey: "user_id"
+// });
+// Collection.belongsTo(User, {
+//     foreignKey: "user_id"
+// });
 
-Collection.hasMany(Games, {
-});
-Games.belongsTo(Collection, {
-});
+// Collection.hasMany(Games, {
+//     foreignKey:"collection_id"
+// });
+// Games.belongsTo(Collection, {
+//     foreignKey: "collection_id"
+// });
 
-User.hasMany(Comments,{
-});
+// Games.belongsToMany(User, {
+//     through: Collection
+// })
 
-Comments.belongsTo(User,{
+// User.hasMany(Comments,{
+// });
 
-});
+// Comments.belongsTo(User,{
+
+// });
+
+User.hasMany(Games,{
+    foreignKey: "user_id"
+})
+
+Games.belongsTo(User,{
+    foreignKey: "user_id"
+})
 
 module.exports = {
     User,
     Games,
-    Collection,
-    Comments,
-    Friends
+    // Collection,
+    // Comments,
+    // Friends
 }
 
 

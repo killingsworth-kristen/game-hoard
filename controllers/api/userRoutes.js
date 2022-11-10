@@ -28,6 +28,8 @@ router.post(`/login`, async (req,res)=>{
 
 //create account
 router.post('/', async (req,res)=>{
+    console.log("signup")
+    console.log(req.body)
     try {
         const userData = await User.create(req.body);
         req.session.save(()=>{
