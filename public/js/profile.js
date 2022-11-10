@@ -5,18 +5,17 @@ var myWidget = cloudinary.createUploadWidget({
     cloudName: cloudName, 
     uploadPreset: 's72xl1zy'}, (error, result) => { 
       if (!error && result && result.event === "success") { 
-        console.log('Done! Here is the image info: ', result.info); 
-        fetch(`/profile/:id`,{
+        console.log('Done! Here is the image info: ', result.info.path); 
+        const body = {profile_pic: result.info.path}
+        console.log(body)
+        fetch(`/api/users/profile`,{
             method:"PUT",
-            body:JSON.stringify(result.info.url),
-        }).then(res=>{
-                if(res.ok){
-                location.reload()
-                } else {
-                    console.log(res)
-                }
-            })
-        }
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body:JSON.stringify(body),
+        })
+      }
 });
   document.getElementById("upload_widget").addEventListener("click", function(){
       myWidget.open();
