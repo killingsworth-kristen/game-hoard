@@ -1,6 +1,6 @@
 const loginForm = document.querySelector("#login");
 loginForm.addEventListener("submit", e =>{
-    e.preventDefault
+    e.preventDefault();
     const userObj = {
         user_name:document.querySelector("#loginUsername").value,
         password:document.querySelector("#loginPassword").value,
@@ -17,7 +17,7 @@ loginForm.addEventListener("submit", e =>{
             location.reload()
         } else {
             console.log(res);
-            alert("trumpet sound")
+            alert("Incorrect Username or Password! Try again")
         }
     })
 })
@@ -26,11 +26,11 @@ const signupForm = document.querySelector("#signup");
 signupForm.addEventListener("submit", e=>{
     e.preventDefault();
     const userObj = {
-        username:document.querySelector("#signupUsername").value,
-        username:document.querySelector("#signupName").value,
-        username:document.querySelector("#signupPassword").value,
+        user_name:document.querySelector("#signupUsername").value,
+        name:document.querySelector("#signupName").value,
+        password:document.querySelector("#signupPassword").value,
     }
-    fetch("/api/users/",{
+    fetch("/api/users",{
         method:"POST",
         body:JSON.stringify(userObj),
         headers:{
@@ -40,6 +40,8 @@ signupForm.addEventListener("submit", e=>{
         if(res.ok){
             location.reload()
         } else {
+            console.log(res);
+            console.log(userObj)
             alert("trumpet sound")
         }
     })
