@@ -1,34 +1,33 @@
 const router = require('express').Router();
 const frontEndRoutes = require('./frontEndRoutes');
 const apiRoutes = require('./api');
+const { User, Games } = require('../model');
 
-// require models const { list models } = require(`../models`)
 
 
-router.get(`/`, async (req,res)=> {
-    try{
-    // const dbUserData = await User.findAll({
-    //     include : [
-    //       {
-    //         model: Game,
-    //         attributes: [`name`,`numPlayers`,`genre`]
-    //       },
-    //     ],
-    // });
 
-    // const user = await dbUserData.map((user) => 
-    //     user.get({ plain: true })
-    // );
-    
-    res.render('homepage');
+router.get(`/`, async (req, res) => {
+    try {
 
-    } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
+        const usersData = await User.findAll({
+            include: [Games]
+        })
+        console.log(usersData)
+        const users = usersData.map((user) => user.get({ plain: true }));
+        // const games = usersData.games.map((game)=>game.get({plain: true}));
+        res.render('homepage',  {users});
     }
+
+    catch (err) {
+        res.status(500).json(err)
+    }
+    //  (err) => {
+    //     res.json(err)
+    // }
+
 });
 
-router.use( frontEndRoutes);
+router.use(frontEndRoutes);
 router.use('/api', apiRoutes);
 
 module.exports = router;
