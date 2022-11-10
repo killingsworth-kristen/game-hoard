@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {User, Games, Collection} = require('../model')
+const {User, Games, } = require('../model')
 
 
 
@@ -18,7 +18,7 @@ router.get("/profile",(req,res)=>{
         return res.redirect("/login")
     }
     User.findByPk(req.session.user_id,{
-        include: [Collection]
+        include: [Games]
     }).then(userData=>{
         const userGameData = userData.toJSON();
         console.log(userGameData)

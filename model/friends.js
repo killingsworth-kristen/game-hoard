@@ -1,18 +1,18 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+// const { Model, DataTypes } = require('sequelize');
+// const sequelize = require('../config/connection');
 
-class Friends extends Model {}
+// class Friends extends Model {}
 
-Friends.init(
-{
+// Friends.init(
+// {
     
-},{
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'friends'
+// },{
+//     sequelize,
+//     timestamps: false,
+//     freezeTableName: true,
+//     underscored: true,
+//     modelName: 'friends'
     
-});
+// });
 
-module.exports = Friends;
+// module.exports = Friends;

@@ -3,7 +3,8 @@
       "name": "Monopoly",
       "description": "A real-estate board game. The player's goal is to remain financially solvent while forcing opponents into bankruptcy by buying and developing pieces of property. Bankruptcy results in elimination from the game. The last player remaining on the board is the winner.",
       "genre": "Stratagy",
-      "number_players": 8
+      "number_players": 8,
+      "user_id":3
     },
     {
       "name": "Risk",
