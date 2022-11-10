@@ -20,7 +20,7 @@ router.get(`/`, async (req,res)=> {
     //     user.get({ plain: true })
     // );
     
-    res.render('homepage', {user});
+    res.render('homepage', {});
 
     } catch (err) {
         console.log(err);

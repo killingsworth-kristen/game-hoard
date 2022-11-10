@@ -3,7 +3,7 @@
 const router = require('express').Router();
 const {User,Games} = require('../model')
 
-router.get(`/`, async (req, res) => {
+router.get(`/:id`, async (req, res) => {
    
     // // console.log(userData) 
     
@@ -18,16 +18,16 @@ router.get(`/`, async (req, res) => {
         // do next: I want to render('allUsers', {users});
         // get userid from req.session
         //find(where:)
-         const userData = await User.findAll().catch((err) => {
-        res.json(err);
-    });
-        const users = userData.map((user) => user.get({plain: true}));
-        const user = users[0]
-        res.render('profile', user);
+    //      const userData = await User.findAll().catch((err) => {
+    //     res.json(err);
+    // });
+    //     const users = userData.map((user) => user.get({plain: true}));
+    //     const user = users[0]
+        res.render('profile');
         // res.json(`working!`)
     } catch (err) {
         console.log(err);
-        res.status(500).json(err);
+        res.status(500).json(`${err}`);
     }
 });
 
@@ -59,13 +59,28 @@ router.post(`/`, async (req, res) => {
 });
 
 router.put(`/:id`, async (req, res) => {
-    try {
-        res.json(`working!`)
-    } catch (err) {
-        console.log(err);
+    if(!req.session.logged_in){
+        return res.status(401).json({msg:"login first joetato!"})
+      }
+      try {
+        console.log(req.body)
+        const picUrl = await User.update({
+          where: {
+            id: req.params.id,
+            profile_pic: req.body
+          },
+        });
+    
+        if (!picUrl) {
+          res.status(404).json({ message: 'No user found with this id!' });
+          return;
+        }
+    
+        res.status(200).json(picUrl);
+      } catch (err) {
         res.status(500).json(err);
-    }
-});
+      }
+    });
 
 router.delete(`/:id`, async (req, res)=> {
     try {

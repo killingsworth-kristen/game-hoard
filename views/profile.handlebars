@@ -1,10 +1,7 @@
 <h1>Welcome back, {{name}}</h1>
-<button id="addPic">Add Profile Picture</button>
-<button id="editPic" class="hidden">Edit Profile Picture</button>
-<form class="hidden" id="picForm">
-    <input type="file" name="profilePic" id="profilePic">
-    <button id="submitPic">Submit</button>
-</form>
+<button id="upload_widget" class="cloudinary-button">Add Profile Picture</button>
+{{!-- was running into authorization issues/need to pass into a value to then pass into handlebars --}}
+<img src="https://res.cloudinary.com/dwe2wo8w5/image/upload/w_200,h_300,c_fill,q_100/v1668047736/Profile_Picture_kdacr5.jpg">
 <h2>Games I Own</h2>
 {{!-- {{#each}}
 
@@ -18,4 +15,5 @@
     <button>Add Game!</button>
 </form>
 
+<script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script> 
 <script src="/js/profile.js"></script>
