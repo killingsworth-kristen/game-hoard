@@ -3,26 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=', initial-scale=1.0">
     <title>Game Hoard</title>
-    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <header>
-        <a href="/">Home</a>
-        {{#if logged_in}}
-        <a href="/profile">Profile</a>
-        <button id="logoutBtn">Logout</button>
-        {{else}}
-        <a href="/login">Login</a>
-        {{/if}}
+    <header class="text-center">
+            <a href="/">Home</a>
+            {{#if logged_in}}
+            <a href="/profile">Profile</a>
+            <button id="logoutBtn">Logout</button>
+            {{else}}
+            <a href="/login">Login</a>
+            {{/if}}
+            <h1>Game Hoard</h1>
+        </div>
     </header>
     <main>
         {{{body}}}
     </main>
     <footer>
         <hr>
-        <h3>2022 By Kristen, Darryl, Tiffany, Andrew</h3>
+        <div class="container text-center">
+        <h3 class="">2022 By Kristen, Darryl, Tiffany, Andrew</h3>
+        </div>
     </footer>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 </html>

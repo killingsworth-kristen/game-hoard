@@ -1,9 +1,22 @@
-<h1>Home Page</h1>
-<h2>Search for a game</h2>
-<input type="text" name="searchGame" id="serachGame" placeholder="Search for a game!">
-<button>Search</button>
+<h1 class="text-center">Home Page</h1>
+{{!-- <h2>Search for a game</h2>
+<input type="text" name="searchGame" id="serachGame" placeholder="Search for a game!"> --}}
+{{!-- <button>Search</button> --}}
 <br>
-{{!-- {{user}} --}}
-{{#each user}}
+{{#each users}}
+<div class="card">
+{{name}}
+<div class="card">
+{{#each games}}
+    <div class="card">
+        {{name}}
+        <p>{{description}}</p>
+        <P>Genre: {{genre}}</P>
+        <p>Max players: {{number_players}}</p>
+    </div>
 
+{{/each}}
+</div>
+</div>
+    
 {{/each}}

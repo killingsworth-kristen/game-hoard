@@ -14,11 +14,11 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  for (const { id } of users) {
-    const newCollection = await Collection.create({
-      user_id: id,
-    });
-  }
+  // for (const { id } of users) {
+  //   const newCollection = await Collection.create({
+  //     user_id: id,
+  //   });
+  // }
   // for (const { id } of users) {
   //   const newComments = await Comments.create({
   //     user_id: id,

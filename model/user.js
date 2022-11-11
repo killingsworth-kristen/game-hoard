@@ -16,15 +16,20 @@ User.init(
     },
     user_name: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      unique: true
     },
     password: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-        length: [8],
+        len: [8],
         },
       },
+      profile_pic: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      }
    
   },
 {

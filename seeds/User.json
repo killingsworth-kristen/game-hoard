@@ -1,18 +1,21 @@
 [
     {
       "name": "Kristen",
-      "user_name": "sal@hotmail.com",
-      "password": "password1234"
+      "user_name": "kristen345",
+      "password": "password",
+      "profile_pic": null
     },
     {
       "name": "Tiffany",
-      "user_name": "lernantino@gmail.com",
-      "password": "coolPw2020"
+      "user_name": "Tiffany343",
+      "password": "password",
+      "profile_pic": null
     },
     {
       "name": "Andrew",
-      "user_name": "amiko2k20@aol.com",
-      "password": "amiko2k20!"
+      "user_name": "Andrew42",
+      "password": "password",
+      "profile_pic": null
     }
   ]
   
