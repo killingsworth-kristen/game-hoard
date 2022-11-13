@@ -13,12 +13,12 @@
 <h2>Games I Own</h2>
 {{#each games}}
     <div class="card">
-        {{name}}
+        <h5>{{name}}</h5>
         <p>{{description}}</p>
         <P>Genre: {{genre}}</P>
         <p>Max players: {{number_players}}</p>
+        {{!-- <button id="deleteGameBtn">Delete</button> --}}
     </div>
-
 {{/each}}
 
 

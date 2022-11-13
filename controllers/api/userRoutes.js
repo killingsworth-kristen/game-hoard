@@ -77,7 +77,6 @@ router.post("/profile",(req,res)=>{
     if(!req.session.logged_in){
         return res.redirect("/login")
     }
-    console.log(req.body)
     Games.create({
         name: req.body.name,
         description: req.body.description,
@@ -86,5 +85,14 @@ router.post("/profile",(req,res)=>{
         user_id: req.session.user_id
     })
 })
+
+// delete game
+// router.delete(`/profile`, (req,res)=> {
+//     if(!req.session.logged_in){
+//         return res.redirect("/login")
+//     }
+//     console.log(req.body);
+//     Games.destroy({where: {}})
+// })
 
 module.exports=router;
