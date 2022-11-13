@@ -9,7 +9,6 @@ var myWidget = cloudinary.createUploadWidget({
       if (!error && result && result.event === "success") { 
         console.log('Done! Here is the image info: ', result.info.path); 
         const body = {profile_pic: result.info.path}
-        console.log(body)
         fetch(`/api/users/profile`,{
             method:"PUT",
             headers: {
@@ -44,6 +43,16 @@ newGameBtn.addEventListener(`click`, function(e) {
     body: JSON.stringify(body)
   })
 })
+
+// delete game
+// const deleteGameBtn = document.getElementById(`deleteGameBtn`);
+
+// deleteGameBtn.addEventListener(`click`,function(e) {
+//   e.preventDefault();
+//   e.stopPropagation();
+//   console.log(`${EventTarget.parentNode.id}` + `This is from front end`)
+//   console.log(e)
+// })
 
 
 
