@@ -14,16 +14,12 @@ router.get(`/`, async (req, res) => {
         })
         console.log(usersData)
         const users = usersData.map((user) => user.get({ plain: true }));
-        // const games = usersData.games.map((game)=>game.get({plain: true}));
         res.render('homepage',  {users});
     }
 
     catch (err) {
         res.status(500).json(err)
     }
-    //  (err) => {
-    //     res.json(err)
-    // }
 
 });
 
