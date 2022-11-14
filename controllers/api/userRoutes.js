@@ -87,26 +87,15 @@ router.post("/profile",(req,res)=>{
     })
 })
 
+
 // delete game
-// router.delete(`/:id`, async (req,res)=> {
-//     if(!req.session.logged_in){
-//         return res.redirect("/login")
-//     }
-//     try{
-//         const gameData = await Games.destroy({
-//             where: {
-//                 id: req.params.id,
-//                 user_id: req.session.user_id
-//             },
-//         });
-//         if(!gameData){
-//             res.status(404).json({message: "no game found with this id!"});
-//             return
-//         }
-//         res.status(200).json(gameData)
-//     }catch(err){
-//         res.status(500).json(err)
-//     }
-// })
+router.delete(`/profile/:id`, (req,res)=> {
+    if(!req.session.logged_in){
+        return res.redirect("/login")
+    }
+    console.log(req.body);
+    Games.destroy({where: { id: req.params.id,
+        }})
+})
 
 module.exports=router;
