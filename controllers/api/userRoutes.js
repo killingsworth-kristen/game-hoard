@@ -44,6 +44,7 @@ router.post('/', async (req,res)=>{
 
 //logout
 router.post(`/logout`, (req,res)=> {
+    console.log(req.session.logged_in);
     if (req.session.logged_in) {
         req.session.destroy(() => {
             res.status(204).end();
