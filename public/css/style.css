@@ -51,6 +51,10 @@ body, html {
 .card {
     margin: 2%;
 }
+
+.marginleft {
+    margin: 2%;
+}
 .dragon {
     display: block;
   margin-left: auto;
