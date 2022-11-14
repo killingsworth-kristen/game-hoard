@@ -42,26 +42,16 @@ body, html {
     display:flex;  */
 
   /* } */
-  #Dragon-container img{
+  .Dragon-container img{
     margin: 0 auto; 
     width: 250px;
 
-  }
- 
-  
-
-  
-
-
-
-  
-
-  
+}
 
 .card {
     margin: 2%;
 }
-#dragon {
+.dragon {
     display: block;
   margin-left: auto;
   margin-right: auto;
