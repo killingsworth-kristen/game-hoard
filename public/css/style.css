@@ -9,3 +9,7 @@ header {
 .hidden {
     display: none;
 }
+
+.card {
+    margin: 2%;
+}

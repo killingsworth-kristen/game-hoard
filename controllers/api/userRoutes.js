@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {User} = require('../../model')
+const {User, Games} = require('../../model')
 
 
 //login
@@ -53,11 +53,11 @@ router.post(`/logout`, (req,res)=> {
     }
 });
 
+// add profile pic
 router.put("/profile",(req,res)=>{
     if(!req.session.logged_in){
         return res.redirect("/login")
     }
-    console.log(req.body)
     User.update({
         profile_pic: req.body.profile_pic},{
         where: {
@@ -71,5 +71,28 @@ router.put("/profile",(req,res)=>{
         res.render("profile", data);
     })
 })
+
+// add game
+router.post("/profile",(req,res)=>{
+    if(!req.session.logged_in){
+        return res.redirect("/login")
+    }
+    Games.create({
+        name: req.body.name,
+        description: req.body.description,
+        genre: req.body.genre,
+        number_players: req.body.number_players,
+        user_id: req.session.user_id
+    })
+})
+
+// delete game
+// router.delete(`/profile`, (req,res)=> {
+//     if(!req.session.logged_in){
+//         return res.redirect("/login")
+//     }
+//     console.log(req.body);
+//     Games.destroy({where: {}})
+// })
 
 module.exports=router;

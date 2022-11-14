@@ -5,18 +5,16 @@
 <br>
 {{#each users}}
 <div class="card">
-{{name}}
-<div class="card">
+<h3>{{name}}</h3>
 {{#each games}}
     <div class="card">
-        {{name}}
+        <h5>{{name}}</h5>
         <p>{{description}}</p>
         <P>Genre: {{genre}}</P>
         <p>Max players: {{number_players}}</p>
     </div>
 
 {{/each}}
-</div>
 </div>
     
 {{/each}}
