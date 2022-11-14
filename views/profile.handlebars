@@ -1,30 +1,30 @@
 <div class = "Dragon-container"> 
 <img src="/image/dragon.png" class= "dragon">
 </div>
-<h1>Welcome back, {{name}}</h1>
-<div id="profile-pic-container">
+<h1 class="marginleft">Welcome back, {{name}}</h1>
+<div class="marginleft" id="profile-pic-container">
     <img src="https://res.cloudinary.com/dwe2wo8w5/image/upload/w_200,h_300,c_fill,q_100/{{profile_pic}}" id="profile-pic">
     <br>
     <button id="upload_widget" class="cloudinary-button">Add/Change Profile Picture</button>
 </div>
 {{!-- was running into authorization issues/need to pass into a value to then pass into handlebars --}}
 
-<h2>Add a Game!</h2>
-<form action="" id="addGame">
+<h2 class="marginleft">Add a Game!</h2>
+<form action="" id="addGame" class="marginleft">
     <input type="text" name="gameName" id="gameName" placeholder="Game Name">
     <input type="text" name="gameDescription" id="gameDescription" placeholder="Game Description">
     <input type="text" name="gameGenre" id="gameGenre" placeholder="Game Genre">
-    <input type="number" name="gameNumPlayers" id="gameNumPlayers" placeholder="Max Number of Players">
+    <input type="number" name="gameNumPlayers" id="gameNumPlayers" placeholder="Max Players">
     <button id="newGameBtn">Add Game!</button>
 </form>
-<h2>Games I Own</h2>
+<h2 class="text-center">Games I Own</h2>
 {{#each games}}
     <div class="card">
         <h5>{{name}}</h5>
         <p>{{description}}</p>
         <P>Genre: {{genre}}</P>
         <p>Max players: {{number_players}}</p>
-        {{!-- <button id="deleteGameBtn">Delete</button> --}}
+        {{!-- <button class="delBtn"id="deleteGameBtn">Delete</button> --}}
     </div>
 {{/each}}
 

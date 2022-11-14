@@ -54,6 +54,8 @@ newGameBtn.addEventListener(`click`, function(e) {
 //   console.log(e)
 // })
 
+// const deleteBtns = document.querySelector(".delBtn");
+// deleteBtns.forEach(delBtn)
 
 
 
