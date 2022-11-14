@@ -4,15 +4,31 @@
 {{!-- <button>Search</button> --}}
 <br>
 </div>
-<div id = "Dragon-container" > 
-<img src="/image/dragon.png" alt="">
+<div id = "Dragon-container"> 
+<img src="/image/dragon.png" id = "dragon">
 </div>
 </div>
 
+
 {{!-- {{user}}  --}}
-{{#each user}}
+<br>
+{{#each users}}
+<div class="card">
+<h3>{{name}}</h3>
+{{#each games}}
+    <div class="card">
+        <h5>{{name}}</h5>
+        <p>{{description}}</p>
+        <P>Genre: {{genre}}</P>
+        <p>Max players: {{number_players}}</p>
+    </div>
+
+{{/each}}
+</div>
     
 {{/each}}
+    
+
 {{!-- <div id="DRAGON">
   <div id="SELECT">
   <div class="headStart">
