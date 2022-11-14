@@ -5,7 +5,7 @@ class Games extends Model {}
 
 Games.init(
   {
-        name: {
+      name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
