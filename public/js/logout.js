@@ -1,7 +1,10 @@
 const logoutBtn = document.querySelector("#logoutBtn");
-logoutBtn.addEventListener("Logout",e=>{
+logoutBtn.addEventListener("click",()=>{
     fetch("/api/users/logout",{
-        method:"POST"
+        method:"POST",
+        headers: {
+            "Content-Type": "applicaton/json"
+        },
     }).then(res=>{
         location.reload()
     })

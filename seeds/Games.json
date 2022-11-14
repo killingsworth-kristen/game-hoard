@@ -2,14 +2,14 @@
     {
       "name": "Monopoly",
       "description": "A real-estate board game. The player's goal is to remain financially solvent while forcing opponents into bankruptcy by buying and developing pieces of property. Bankruptcy results in elimination from the game. The last player remaining on the board is the winner.",
-      "genre": "Stratagy",
+      "genre": "Strategy",
       "number_players": 8,
       "user_id":3
     },
     {
       "name": "Risk",
       "description": "Players aim to conquer their enemies' territories by building an army, moving their troops in, and engaging in battle. Depending on the roll of the dice, a player will either defeat the enemy or be defeated",
-      "genre": "Stratagy",
+      "genre": "Strategy",
       "number_players": 6
     },
     {
@@ -21,13 +21,13 @@
     {
       "name": "Stratigo",
       "description": " On a board of 10×10 squares. Each player controls 40 pieces representing individual soldier ranks in an army. The objective of the game is to find and capture the opponent's Flag, or to capture so many enemy pieces that the opponent cannot make any further moves.",
-      "genre": "Stratagy",
+      "genre": "Strategy",
       "number_players": 2
     },
     {
       "name": "Munchkin",
       "description": "The mega-hit card game about dungeon adventure . . . with none of that stupid roleplaying stuff. You and your friends compete to kill monsters and grab magic items. Don the Horny Helmet and the Boots of Butt-Kicking. Wield the Staff of Napalm . . . or maybe the Chainsaw of Bloody Dismemberment.",
-      "genre": "Stratagy",
+      "genre": "Strategy",
       "number_players": 6
     },
     {
@@ -39,7 +39,7 @@
     {
       "name": "Dragoon",
       "description": "An action strategy game with an ever-changing landscape. Village and city tiles populate the map each round using a coordinate system. During your turn, choose between claiming villages and cities that pay you tribute, or destroying them out right for instant gold.",
-      "genre": "Stratagy",
+      "genre": "Strategy",
       "number_players": 4
     }
     
