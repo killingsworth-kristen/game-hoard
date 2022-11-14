@@ -45,14 +45,24 @@ newGameBtn.addEventListener(`click`, function(e) {
 })
 
 // delete game
-// const deleteGameBtn = document.getElementById(`deleteGameBtn`);
+const deleteGameBtn = document.querySelectorAll(`.deleteGameBtn`);
 
-// deleteGameBtn.addEventListener(`click`,function(e) {
-//   e.preventDefault();
-//   e.stopPropagation();
-//   console.log(`${EventTarget.parentNode.id}` + `This is from front end`)
-//   console.log(e)
-// })
+deleteGameBtn.forEach(delBtn=>{
+  delBtn.addEventListener("click",e=>{
+    // console.log(e.target.getAttribute("id"))
+      const gameId = e.target.getAttribute("gameId")
+      console.log(gameId);
+      fetch(`/api/users/profile/${gameId}`,{
+          method:"DELETE"
+      }).then(res=>{
+          if(res.ok){
+              location.reload();
+          } else {
+              alert("trumpet sound")
+          }
+      })
+  })
+})
 
 
 

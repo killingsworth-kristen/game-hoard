@@ -87,13 +87,15 @@ router.post("/profile",(req,res)=>{
     })
 })
 
+
 // delete game
-// router.delete(`/profile`, (req,res)=> {
-//     if(!req.session.logged_in){
-//         return res.redirect("/login")
-//     }
-//     console.log(req.body);
-//     Games.destroy({where: {}})
-// })
+router.delete(`/profile/:id`, (req,res)=> {
+    if(!req.session.logged_in){
+        return res.redirect("/login")
+    }
+    console.log(req.body);
+    Games.destroy({where: { id: req.params.id,
+        }})
+})
 
 module.exports=router;
