@@ -1,15 +1,60 @@
 body {
-    background-color: salmon;
+    background-color: rgb(125, 244, 228);
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: auto;
 }
 
 header {
-    background-color: aqua;
+    background-color: rgb(99, 106, 106);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 35px
 }
+.homepage-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 48vh;
+}
+
+/* .particles {
+    margin: 8px;
+    padding: 8px;
+
+} */
 
 .hidden {
     display: none;
 }
 
+body, html {
+    margin: 1px; 
+    padding: 1px; 
+    font-size: 18px;
+  }
+
+  /* #Dragon-container{
+    width: 250px;
+    margin-right: 50px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    justify-content: center;
+    display:flex;  */
+
+  /* } */
+  .Dragon-container img{
+    margin: 0 auto; 
+    width: 250px;
+
+}
+
 .card {
     margin: 2%;
 }
+.dragon {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
