@@ -51,10 +51,22 @@ body, html {
 .card {
     margin: 2%;
 }
+
+.marginleft {
+    margin: 2%;
+}
 .dragon {
     display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
+a {
+    text-decoration: none;
+}
+
+.deleteGameBtn {
+    width: fit-content;
+    margin: 0 auto;
+}
 

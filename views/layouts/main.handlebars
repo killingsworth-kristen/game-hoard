@@ -11,12 +11,24 @@
 </head>
 <body>
     <header class="text-center">
-            <a href="/">Home</a>
+            <a href="/">
+            <button>
+                Home
+            </button>
+            </a>
             {{#if logged_in}}
-            <a href="/profile">Profile</a>
+            <a href="/profile"> 
+                <button>
+                    Profile
+                </button>
+            </a>
             <button id="logoutBtn">Logout</button>
             {{else}}
-            <a href="/login">Login</a>
+            <a href="/login"> 
+                <button>
+                    Login
+                </button> 
+            </a>
             {{/if}}
             <h1>Game Hoard</h1>
         </div>
