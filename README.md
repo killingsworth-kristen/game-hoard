@@ -28,6 +28,26 @@ npm start
 
 Create a .env file following the example of the file "example.env" to include your personal credentials. 
 
+The application can be accessed at this URL: [Game Hoard](https://gamehoard2022.herokuapp.com/)
+
+* Homepage
+
+The home page displays all users and the games that they own. If you login, you can then access your profile. 
+
+![](https://github.com/killingsworth-kristen/game-hoard/blob/dev/Assets/homepage.PNG)
+
+* Login 
+
+If you are already logged in and try to go to the login page, it will auto-redirect you to your profile. 
+If you do not have an account, this is where you can create a new one. 
+
+![](https://github.com/killingsworth-kristen/game-hoard/blob/dev/Assets/login.PNG)
+
+* Profile
+
+On your profile, you can add or change your profile picture. You can also see what games that you own and add/delete them. 
+
+![](https://github.com/killingsworth-kristen/game-hoard/blob/dev/Assets/profile.PNG)
 
 ## Credits:
 
