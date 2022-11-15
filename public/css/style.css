@@ -65,3 +65,8 @@ a {
     text-decoration: none;
 }
 
+.deleteGameBtn {
+    width: fit-content;
+    margin: 0 auto;
+}
+
