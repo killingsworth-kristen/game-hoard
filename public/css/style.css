@@ -61,4 +61,7 @@ body, html {
   margin-right: auto;
 }
 
+a {
+    text-decoration: none;
+}
 
