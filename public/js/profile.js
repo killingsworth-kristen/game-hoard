@@ -64,8 +64,6 @@ deleteGameBtn.forEach(delBtn=>{
   })
 })
 
-// const deleteBtns = document.querySelector(".delBtn");
-// deleteBtns.forEach(delBtn)
 
 
 
